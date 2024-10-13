@@ -27,64 +27,6 @@
     {%block stylesheets%}{%endblock%}
 </head>
 <body>
-    <!-- Top Navbar -->
-    <nav class="navbar navbar-top navbar-expand-lg fixed-top navbar-light bg-body-tertiary" style="padding: 0.4rem 0;" id="top-bar">
-
-        <div class="container-fluid">
-            <ul class="navbar-nav d-flex justify-content-start">
-                <li class="nav-item align-items-center d-flex" >
-                  <i class="fas fa-sun fa-2x"></i>
-                  <!-- Default switch -->
-                  <div class="ms-2 form-check form-switch">
-                    <input class="form-check-input" type="checkbox" role="switch" id="themingSwitcher" />
-                  </div>
-                  <i class="fas fa-moon fa-2x"></i>
-                </li>
-            </ul>
-            <!-- Right elements -->
-            <ul class="navbar-nav ms-auto flex-row" style="margin-right: 2rem;">
-                <li class="nav-item me-2 me-lg-1 d-flex align-items-center">
-                    <a class="nav-link" href="#">
-                        <span><i class="fas fa-cart-shopping fa-5x"></i></span>
-                    </a>
-                </li>
-                <li class="nav-item me-2 me-lg-1 d-flex align-items-center" style="margin-left: 2rem;">
-                    <a class="nav-link" href="#">
-                        <i class="fas fa-bell fa-2x"></i>
-                        <span class="badge rounded-pill badge-notification bg-danger">12</span>
-                    </a>
-                </li>
-            </ul>
-            <!-- Right elements -->
-            
-        </div>
-    </nav>
-    <!-- Top Navbar -->
-
-    
-    <div class="container-fluid">
-        <div id="liveAlertPlaceholder"></div>
-    </div>
-   
-    {% with messages=get_flashed_messages(with_categories=true) %}
-        {%if messages%}
-            {%for category,message in messages%}
-                {%if category =='error'%}
-                    <div class="alert alert-danger alert-dismissible fade show rounded-pill" role="alert" style="text-align: center;">
-                        {{message}}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" style="margin-top: auto;"></button>
-                    </div>
-                {%else%}
-                    <div class="alert alert-success alert-dismissible fade show rounded-pill" role="alert" style="text-align: center;">
-                        {{message}}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" style="margin-top: auto;"></button>
-                    </div>
-                {%endif%}
-            {%endfor%}
-        {%endif%}
-    {% endwith %}
-
-
 
     <div class="container-fluid">
         {%block content%}
